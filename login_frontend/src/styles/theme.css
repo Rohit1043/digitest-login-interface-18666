@@ -1,0 +1,62 @@
+/* Corporate Navy theme tokens + global styling */
+:root {
+  --color-primary: #1E3A8A;  /* Navy */
+  --color-accent: #F59E0B;   /* Gold */
+  --color-bg: #F3F4F6;       /* App background */
+  --color-surface: #FFFFFF;  /* Card surface */
+  --color-text: #111827;     /* Primary text */
+  --color-muted: #6B7280;    /* Muted text */
+  --color-border: #E5E7EB;   /* Hairline borders */
+  --color-success: #059669;  /* Success */
+  --color-error: #DC2626;    /* Error */
+
+  /* Accent gradient (10% tints approximating from-blue-900/10 to-amber-600/10) */
+  --gradient-accent: linear-gradient(
+    90deg,
+    rgba(30, 58, 138, 0.10) 0%,
+    rgba(245, 158, 11, 0.10) 100%
+  );
+
+  --radius-card: 18px;
+  --shadow-card: 0 18px 50px rgba(17, 24, 39, 0.10);
+  --shadow-card-hover: 0 20px 65px rgba(17, 24, 39, 0.13);
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  --focus-ring: 0 0 0 4px rgba(245, 158, 11, 0.28);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 10px;
+}
+
+::selection {
+  background: rgba(245, 158, 11, 0.22);
+}
